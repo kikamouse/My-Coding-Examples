@@ -1,0 +1,68 @@
+Name: Enrique Mayoral  
+
+SET LINESIZE 150
+SET PAGESIZE 50
+SET ECHO ON
+
+-- Step 1
+CREATE OR REPLACE VIEW cust_view AS
+SELECT customerid, firstname, lastname, state
+FROM book_customer;
+
+INSERT INTO book_customer
+VALUES(1021, 'BLAKE', 'EDWARD', NULL, NULL, 'TX', NULL, NULL);
+
+SELECT * FROM cust_view;
+
+--Step 2
+CREATE OR REPLACE VIEW cust_order AS
+SELECT book_customer.customerid, lastname, state, orderid, orderdate
+FROM book_customer, book_order
+WHERE book_customer.customerid = book_order.customerid;
+
+
+/*
+CREATE OR REPLACE TRIGGER trg_book_order
+AFTER INSERT OR UPDATE OF orderid ON book_order
+BEGIN
+INSERT INTO book_order
+SELECT orderid, orderdate
+FROM INSERTED
+END;
+/
+*/
+
+INSERT INTO cust_order
+VALUES(1022, 'smith', 'KS', 1021, '10-OCT-2004');
+
+--Step 3
+
+--It seemed to try to insert into a join statement that is not allowed in Oracle SQL. I think it is because every c olumn in the view is not a unique identifier for the referenced tables.
+
+--step 4
+DROP SEQUENCE PUBNUM_SEQ;
+
+CREATE SEQUENCE PUBNUM_SEQ
+START WITH 7 
+INCREMENT BY 2
+MAXVALUE 1000;
+
+INSERT INTO publisher
+VALUES(pubnum_seq.nextval, 'Joe', 'John', '7605551212');
+
+--Step 5 54 INSERT INTO publisher
+VALUES(pubnum_seq.nextval, 'Double Week', 'Jennifer Close', '800-959-6321');
+INSERT INTO publisher
+VALUES(pubnum_seq.nextval, 'Specific House', 'Freddie Farmore', '866-825-3200');
+
+--Step 6
+SELECT pubnum_seq.nextval, pubnum_seq.currval from DUAL;
+
+--Step 7
+CREATE INDEX book_order_idx
+ON book_order(orderid, customerid);
+
+--Step 8
+SELECT object_type, COUNT(object_type) AS "NUMBER OF EACH OBJECT"
+FROM USER_OBJECTS
+GROUP BY object_type;
