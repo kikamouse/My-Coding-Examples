@@ -1,0 +1,706 @@
+
+header {
+	padding: 1px 25px;
+	background: rgb(76,67,65);
+	text-align: center;
+}
+h1 {
+	color: white;.
+	margin: 40px;
+}
+
+h3 {
+	padding: 0 25px;
+}
+
+img {
+    margin-bottom: -3.5px;
+}
+
+
+table td {
+	border: 1px solid black;
+}
+
+td {
+	padding: 5px;
+}
+
+tr th {
+	background: rgb(219,126,64);
+	color: white;
+}
+
+body {
+	font: 100% Georgia, Times, serif;
+	background: rgb(255, 255, 255);
+	padding-bottom: 1px;
+}
+html {
+	padding: 0;
+	background: rgb(100, 98, 102);
+	width: 1000px;
+	margin: 0 auto;
+}
+
+h2 {
+	padding: 2px 25px;
+	background: rgb(219,126,64);
+	color: white;
+}
+
+p {
+	padding: 0 25px;
+}
+
+tr td a img {
+	height: 50px;
+}
+
+.navigation {
+	display: block;
+    background: rgb(219,126,64);
+	position: relative;
+    color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+}
+
+.navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 20px;
+}
+
+.navigation li {
+	float: left;
+	position: relative;
+	padding: 0 10px;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: white;
+}
+.navigation a:hover{
+	color:black;
+	background-color: f9f9f9;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.selfie  img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: rgb(219,126,64);
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	font: 100% Georgia, Times, serif;
+    text-transform: uppercase;
+	font-weight: bold;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 224;
+    top: -1.7px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+	background-color: rgb(219,126,64);
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #f9f9f9;
+	color: black;
+}
+
+.thumbnail {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+/*Eliminates padding, centers the thumbnail */
+
+/* Styles the thumbnail */
+a.lightbox img {
+  height: 300px;
+  border: 3px solid white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  margin: 20px 20px 20px 20px;
+}
+
+/* Styles the lightbox, removes it from sight and adds the fade-in transition   overflow: hidden; */
+.lightbox-target {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+
+}
+
+/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+.lightbox-target img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 0%;
+  max-width: 0%;
+  border: 3px solid white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+/* Styles the close link, adds the slide down transition */
+a.lightbox-close {
+  display: block;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  background: white;
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  top: 8px;
+  right: 18px;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+a.lightbox-close:before {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  left: 26px;
+  top: 10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+a.lightbox-close:after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  left: 26px;
+  top: 10px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+.lightbox-target:target {
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  margin-left: -500px;
+}
+
+.lightbox-target:target img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.lightbox-target:target a.lightbox-close {
+  top: 0px;
+
+}
+
+.summary {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+}
+
+.summary h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.highlights {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+}
+
+
+.highlights h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+ .highlights table {
+    padding: 10px 164px;
+}
+
+.education {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+}
+	
+.education h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+	
+.education p, .education h4 {
+	padding: 0 25px;
+}
+
+.experience {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+}
+
+.experience h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.experience h3 {
+	padding: 0 25px;
+}
+
+.employment {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+}
+
+.employment h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.awards {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+}
+
+.awards h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.contact {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+}
+
+.contact h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.logo {
+    background: rgb(76, 67, 65);
+	padding: 10px;
+}
+ 
+.logo img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	height: 170px;
+}
+
+.logoMobile a img {
+	height: 100px;
+}
+
+.qualifications {
+	width: 955px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+}
+
+.qualifications h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0	
+}
+
+.contents {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;	
+	webkit-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+}
+
+.contents h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.authenticity {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;	
+	webkit-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+}
+
+.authenticity h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;	
+}
+
+.mission {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+	webkit-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);	
+}
+
+.mission h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.salespitch{
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+	webkit-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+}
+
+.salespitch h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.educationportfolio {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+	webkit-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+}
+
+.educationportfolio h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.educationportfolio h3 {
+	padding-left: 15px
+}
+
+.resume {
+	    width: 955px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+}
+
+.resume h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0	
+}
+
+
+.objective {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+	webkit-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+}
+
+.objective h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.highlightsportfolio {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+	webkit-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+}
+
+.highlightsportfolio h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.highlightsportfolio table {
+	margin: auto;
+    margin-bottom: 15px;
+}
+
+.experienceportfolio {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+	webkit-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+}
+
+.experienceportfolio h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.experienceportfolio h3 {
+	padding-left: 15px
+}
+
+.employmentportfolio {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+	webkit-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+}
+
+.employmentportfolio h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.awardsportfolio{
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+	webkit-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+    box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.6);
+}
+
+.awardsportfolio h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.development {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+}
+
+.development h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.references {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+}
+
+.references h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.references h3 {
+	padding-left: 15px
+}
+
+.Volunteer {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+}
+
+.Volunteer h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.samples {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+}
+
+.samples h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
+
+.jobdescription {
+    width: 948px;
+    margin: 25px auto;
+    border: 1px solid black;
+    background: rgb(237, 228,214);
+    font-size: 90%;
+    padding: 0;
+}
+
+.jobdescription h2 {
+	border: none;
+    background: rgb(219,126,64);
+    margin-top: 0;
+}
