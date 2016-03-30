@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title></title>
+	</head>
+	<body>
+    <?php
+     $var = 10;
+     
+     switch($var):
+         case 10:
+             echo "Value 10.";
+             break;
+        case 20:
+            echo "Value 20.";
+            break;
+        case 30:
+            echo "Value 30.";
+            break;
+        default:
+            echo "It's not 10 or 20 or 30.";
+            break;
+    endswitch;         
+    ?>
+	</body>
+</html>
