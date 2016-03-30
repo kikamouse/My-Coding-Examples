@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Modifying Elements</title>
+  </head>
+  <body>
+    <p>
+      <?php
+      //Declaring an array with entries in array
+        $languages = array("HTML/CSS",
+        "JavaScript", "PHP", "Python", "Ruby");
+        
+      //Removes array "Python from current array  
+        unset($languages[3]);
+
+        //For loop to output each array value
+        foreach($languages as $lang) {
+          print "<p>$lang</p>";
+        }
+      ?>
+    </p>
+  </body>
+</html>
